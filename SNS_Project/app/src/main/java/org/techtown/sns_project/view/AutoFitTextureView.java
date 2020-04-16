@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.techtown.sns_project;
+package org.techtown.sns_project.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
