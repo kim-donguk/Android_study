@@ -19,7 +19,7 @@ import org.techtown.sns_project.R;
 import org.techtown.sns_project.activity.LoginActivity;
 import org.techtown.sns_project.activity.MainActivity;
 
-public class singUpActivity extends AppCompatActivity {
+public class singUpActivity extends BasicActivity {
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

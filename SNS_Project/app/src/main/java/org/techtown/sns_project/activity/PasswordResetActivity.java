@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.techtown.sns_project.R;
 
-public class PasswordResetActivity extends AppCompatActivity {
+public class PasswordResetActivity extends BasicActivity {
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.techtown.sns_project.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BasicActivity {
     private static final  String TAG = "MainActivity";
 
     @Override
@@ -51,11 +52,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
-
-            mystartActivity(MemberActivity.class);
         };
 
         findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
+        findViewById(R.id.floatingActionButton).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.logoutButton:
                     FirebaseAuth.getInstance().signOut();
                     startSignUpActivity();
+                    break;
+                case R.id.floatingActionButton:
+                    mystartActivity(WritePostActivity.class);
                     break;
             }
         }
