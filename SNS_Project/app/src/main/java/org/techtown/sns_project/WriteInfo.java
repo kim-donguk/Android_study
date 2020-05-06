@@ -1,14 +1,19 @@
 package org.techtown.sns_project;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class WriteInfo {
     private String title;
-    private String contents;
+    private ArrayList<String> contents;
     private String publisher;
+    private Date createdAt;
 
-    public WriteInfo(String title, String contents, String publisher){
+    public WriteInfo(String title, ArrayList<String> contents, String publisher,Date createdAt){
         this.title = title;
         this.contents = contents;
         this.publisher = publisher;
+        this.createdAt = createdAt;
     }
     public String gettitle(){
         return this.title;
@@ -16,10 +21,10 @@ public class WriteInfo {
     public void gettitle(String title){
         this.title = title;
     }
-    public String getcontents(){
+    public ArrayList<String> getcontents(){
         return this.contents;
     }
-    public void getcontents(String contents){
+    public void getcontents(ArrayList<String> contents){
         this.contents = contents;
     }
     public String getpublisher(){
@@ -27,5 +32,11 @@ public class WriteInfo {
     }
     public void getpublisher(String publisher){
         this.publisher = publisher;
+    }
+    public Date getcreatedAt(){
+        return this.createdAt;
+    }
+    public void getcreatedAt(Date publisher){
+        this.createdAt = createdAt;
     }
 }
